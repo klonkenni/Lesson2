@@ -1,0 +1,23 @@
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/klonkenni/Desktop/Lesson2/venv/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/klonkenni/Desktop/Lesson2/venv/lib/python3.6/site-packages/telegram/ext/commandhandler.py", line 173, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "/Users/klonkenni/Desktop/Lesson2/Modules/bot.py", line 38, in greet_user
+    pl = planet_object(now)
+TypeError: 'str' object is not callable
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ReadTimeoutError("SOCKSHTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=5.0)",)': /bot623028894:AAHXcmMIpeNuuSxHIxqI6lOv768lceH9VVM/getMe
+telegram.ext.dispatcher - ERROR - An uncaught error was raised while processing the update
+Traceback (most recent call last):
+  File "/Users/klonkenni/Desktop/Lesson2/venv/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 279, in process_update
+    handler.handle_update(update, self)
+  File "/Users/klonkenni/Desktop/Lesson2/venv/lib/python3.6/site-packages/telegram/ext/commandhandler.py", line 173, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "/Users/klonkenni/Desktop/Lesson2/Modules/bot.py", line 36, in greet_user
+    pl = planet_object(now)
+TypeError: 'ephem.Jupiter' object is not callable
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
