@@ -16,6 +16,7 @@ def who_is_user(user_age):
     return resp
 
 
-print(who_is_user(age))
+val = who_is_user(age)
+print(val)
 
 
