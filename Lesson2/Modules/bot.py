@@ -2,6 +2,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import ephem
 import datetime
 import logging
+import json
 
 # Настройки прокси
 PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
@@ -14,7 +15,7 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
 
 
 def main():
-    mybot = Updater("623028894:AAHXcmMIpeNuuSxHIxqI6lOv768lceH9VVM", request_kwargs=PROXY)
+    mybot = Updater(open("key", "r").read(), request_kwargs=PROXY)
 
     mybot.dispatcher.add_handler(CommandHandler("ephem", greet_user))
     mybot.dispatcher.add_handler(MessageHandler(Filters.text, talk_to_me))
