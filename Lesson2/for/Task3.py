@@ -10,20 +10,15 @@ class_list = [
 ]
 
 school_avg = 0
-school_counter = 0
 
 # Средняя оценка по классу
 for i in class_list:
     avg = 0
-    counter = 0
-
     for x in i.get("scores"):
         avg += x
-        counter += 1
-    print("Класс: " + i.get("class") + ", средняя оценка: " + str(round(float(avg/counter),2)) )
-
-    school_avg += avg
-    school_counter += counter
+    final_avg = round(float(avg/len(i.get("scores"))), 2)
+    print("Класс: " + i.get("class") + ", средняя оценка: " + str(final_avg))
+    school_avg += round(float(avg/len(i.get("scores"))), 2)
 
 # Средняя оценка по школе
-print("\nСредняя оценка по школе: " + str(round(float(school_avg/school_counter),2)))
+print("\nСредняя оценка по школе: " + str(round(float(school_avg/len(class_list)), 2)))
