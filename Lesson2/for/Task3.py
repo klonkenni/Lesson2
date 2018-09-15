@@ -1,10 +1,10 @@
 #Оценки
 class_list = [
-    {"class": "1A", "scores": [2, 5, 3, 2, 4, 5, 5, 3]}
+    {"class": "1A", "scores": [2.1, 5, 3, 2, 4, 5, 5, 3]}
     , {"class": "1B", "scores": [3, 5, 3, 2, 4, 5, 5, 3]}
     , {"class": "1C", "scores": [3, 3, 3, 3, 4, 5, 4, 3]}
     , {"class": "2A", "scores": [2, 5, 4, 5, 5, 5, 3]}
-    , {"class": "2B", "scores": [3, 2, 4, 5, 5, 3]}
+    , {"class": "2B", "scores": [3.3, 2.9, 4.5, 5.6, 5.7, 3]}
     , {"class": "3A", "scores": [2, 5, 3]}
     , {"class": "3B", "scores": [4]}
 ]
@@ -20,10 +20,10 @@ for i in class_list:
     for x in i.get("scores"):
         avg += x
         counter += 1
-    print("Класс: " + i.get("class") + ", средняя оценка: " + str(int(avg/counter)))
+    print("Класс: " + i.get("class") + ", средняя оценка: " + str(round(float(avg/counter),2)) )
 
     school_avg += avg
     school_counter += counter
 
 # Средняя оценка по школе
-print("\nСредняя оценка по школе: " + str(int(school_avg/school_counter)))
+print("\nСредняя оценка по школе: " + str(round(float(school_avg/school_counter),2)))
